@@ -1,0 +1,40 @@
+
+<mat-toolbar color="primary" mat-button (click)="sidenav.toggle()">Simple Currency Converter</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>Sidebar content here</mat-sidenav>
+  <mat-sidenav-content>
+    <div class="container">
+    <form>
+        <mat-form-field>
+          <mat-select [(ngModel)]="fromCurrency" name="fromCurrency">
+            <mat-option *ngFor="let currency of currencies" [value]="currency">
+              {{currency}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-select [(ngModel)]="toCurrency" name="toCurrency">
+            <mat-option *ngFor="let currency of currencies" [value]="currency">
+              {{currency}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <input matInput type="number" [(ngModel)]="amount" placeholder="Amount" name="amount">
+        </mat-form-field>
+      
+        <!-- <button mat-raised-button (click)="convert()">Convert</button> -->
+        <button color="accent" mat-raised-button (click)="convert()">Convert</button>
+      
+        <div *ngIf="result" class="result mat-typography">
+          <h1>  {{amount}} {{fromCurrency}} = {{result}} {{toCurrency}}</h1>
+        </div>
+    </form>
+  </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+  
+  
