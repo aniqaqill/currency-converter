@@ -1,5 +1,9 @@
 # CurrencyConverter
 
+My first Angular App that convert the currency with given input using a public API Layer
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
 ## Development server
