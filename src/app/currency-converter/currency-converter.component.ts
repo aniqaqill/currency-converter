@@ -2,11 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 
-interface ExchangeRate {
-  rates: Record<string, number>;
-  base: string;
-  date: string;
-}
 
 @Component({
   selector: 'app-currency-converter',
